@@ -1,0 +1,39 @@
+name: bootstrap
+on:
+  push:
+  pull_request:
+
+jobs:
+  check-platform:
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:16-alpine
+        env:
+          POSTGRES_USER: lab_user
+          POSTGRES_PASSWORD: lab_password
+          POSTGRES_DB: mercadoops
+        ports:
+          - 5433:5432
+        options: >-
+          --health-cmd "pg_isready -U lab_user -d mercadoops"
+          --health-interval 5s --health-timeout 5s --health-retries 15
+    env:
+      DATABASE_URL: postgresql+psycopg://lab_user:lab_password@localhost:5433/mercadoops
+      APP_ENV: test
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+      - name: Install dependencies
+        run: uv sync --python 3.12
+      - name: Static checks and tests
+        run: |
+          uv run ruff check src scripts tests
+          uv run pytest -q
+      - name: Migrate, seed, and verify
+        run: |
+          uv run alembic upgrade head
+          uv run python scripts/seed.py --scale tiny --seed 20261101
+          uv run python scripts/verify_bootstrap.py --snapshot counts.bootstrap.json
+          uv run python scripts/seed.py --scale tiny --seed 20261101
+          uv run python scripts/verify_bootstrap.py --compare counts.bootstrap.json
