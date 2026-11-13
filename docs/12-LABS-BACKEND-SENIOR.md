@@ -2,7 +2,7 @@
 
 BE-013 a BE-026. Aquí se espera razonar sobre semántica de fallos, simultaneidad, seguridad y arquitectura. Usa solo pasarelas de pago falsas y datos sintéticos.
 
-**Contrato general:** el agente de Cursor debe mostrar únicamente este enunciado, crear stubs bajo `workspaces/backend/` cuando el estudiante lo pida y dejar la implementación pendiente. **No incluir soluciones, SQL de respuesta, algoritmos funcionales ni resultados precalculados.**
+**Contrato general:** Copilot debe mostrar únicamente este enunciado, crear stubs bajo `workspaces/backend/` cuando el estudiante active el laboratorio y dejar la implementación pendiente. **No incluir soluciones, SQL de respuesta, algoritmos funcionales ni resultados precalculados.**
 
 ## BE-013 — Autenticación y autorización multi-tenant
 

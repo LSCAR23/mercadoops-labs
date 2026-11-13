@@ -17,13 +17,13 @@ Construir un entorno que imite los problemas comunes de una empresa que vende pr
 | Analítica local | Pandas, Polars, DuckDB, PyArrow | Comparar estrategias batch y rendimiento |
 | Testing | Pytest, HTTPX, Ruff, MyPy | Comprobación de calidad por niveles |
 | Infra | Docker Compose PostgreSQL y Redis | Entorno repetible; Redis reservado a labs backend |
-| IDE / mentor | Cursor | Montaje y revisión; no hacer ejercicios |
+| IDE / mentor | VS Code + GitHub Copilot | Montaje y revisión; no hacer ejercicios |
 
 ## Flujo lógico
 
 ```text
                    +------------------------+
-                   | Cursor (infra y mentor)|
+                   | VS Code + Copilot     |
                    +-----------+------------+
                                |
                   docs + código base + ejercicios
@@ -49,7 +49,7 @@ Construir un entorno que imite los problemas comunes de una empresa que vende pr
 - `ops`: patrones técnicos (idempotencia, outbox, bitácora); **existen tablas, no implementaciones**.
 - `analytics`: almacenamiento raw de datos importados y tablas destino **vacías** para retos.
 - `scripts/seed.py`: crea datos de prueba, no calcula KPI, no limpia datos y no implementa reportes.
-- `workspaces`: código propio del estudiante; Cursor no debe tocar TODO(student) salvo instrucción explícita.
+- `workspaces`: código propio del estudiante; Copilot no debe tocar TODO(student) salvo instrucción explícita.
 
 ## Reglas de negocio de dominio
 

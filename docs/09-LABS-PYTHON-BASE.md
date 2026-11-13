@@ -2,7 +2,7 @@
 
 PY-001 a PY-014. Enfocados en código de producción testeable para análisis de datos. Se exige Python moderno, funciones pequeñas, manejo de errores, typing y separación de IO/transformación.
 
-**Contrato general:** el agente de Cursor debe mostrar únicamente este enunciado, crear stubs bajo `workspaces/python/` cuando el estudiante lo pida y dejar la implementación pendiente. **No incluir soluciones, SQL de respuesta, algoritmos funcionales ni resultados precalculados.**
+**Contrato general:** Copilot debe mostrar únicamente este enunciado, crear stubs bajo `workspaces/python/` cuando el estudiante active el laboratorio y dejar la implementación pendiente. **No incluir soluciones, SQL de respuesta, algoritmos funcionales ni resultados precalculados.**
 
 ## PY-001 — Tipado, validación y parsing
 
@@ -142,7 +142,7 @@ PY-001 a PY-014. Enfocados en código de producción testeable para análisis de
 
 **Entrega.** `PY-014.py` + informe de cambios.
 
-**Restricciones y extensiones.** Debe existir versión original del estudiante; Cursor no inventará el código heredado.
+**Restricciones y extensiones.** Debe existir versión original del estudiante; Copilot no inventará el código heredado.
 
 ## Evaluación
 

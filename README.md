@@ -1,13 +1,15 @@
 # MercadoOps Labs — Python, SQL, Analytics y Backend Senior
 
-Un **proyecto de entrenamiento práctico, sin soluciones**, para progresar desde fundamentos hasta análisis de datos de nivel experto y diseño de sistemas backend de nivel senior. El agente de Cursor debe **construir la plataforma, NO resolver tus retos**.
+Un **proyecto de entrenamiento práctico, sin soluciones**, para progresar desde fundamentos hasta análisis de datos de nivel experto y diseño de sistemas backend de nivel senior. GitHub Copilot en VS Code te acompaña como mentor: **puede ayudarte a construir y verificar la plataforma, pero no debe resolver tus retos**.
 
 **Tema:** Marketplace multiempresa con órdenes, inventario, clientes, pagos, reembolsos, envíos, sesiones/eventos web, staging de importaciones y auditoría. **Datos:** sintéticos, reproducibles, ~2 años (fecha ancla 2026-11-01 UTC), dos empresas.
 
 ## Qué incluye este ZIP
 
-- `docs/*.md`: contrato exacto para Cursor, arquitectura, setup, SQL, Python, backend, pruebas, rúbricas y proyectos finales.
-- `.cursor/rules/00-project.mdc`: regla persistente contra respuestas automáticas de los ejercicios.
+- `docs/*.md`: contrato del agente, arquitectura, setup, SQL, Python, backend, pruebas, rúbricas y proyectos finales.
+- `.github/copilot-instructions.md`: reglas persistentes de GitHub Copilot para este repositorio.
+- `.vscode/extensions.json`: extensiones recomendadas para trabajar en VS Code.
+- `.cursor/rules/00-project.mdc`: regla heredada, conservada para compatibilidad con Cursor; VS Code usa `.github/copilot-instructions.md`.
 - `db/alembic/versions/*.py`: **cinco migraciones Alembic completas**, reversibles, con SQL real PostgreSQL.
 - `src/mercadoops`: API FastAPI mínima con `/health/live` y `/health/ready`.
 - `scripts/seed.py`: generador reproducible de datos sintéticos; defectos controlados en `analytics.raw_orders`.
@@ -16,10 +18,10 @@ Un **proyecto de entrenamiento práctico, sin soluciones**, para progresar desde
 
 ## Inicio rápido (PowerShell en Windows 11)
 
-Requisitos: Python 3.12 o 3.13, [uv](https://docs.astral.sh/uv/), Docker Desktop (Linux containers), Git, Cursor. Ejecutar desde la raíz del proyecto.
+Requisitos: VS Code, GitHub Copilot Chat, Python 3.12 o 3.13, [uv](https://docs.astral.sh/uv/), Docker Desktop (Linux containers) y Git. Ejecuta los comandos en el terminal PowerShell de VS Code, desde la raíz del proyecto.
 
 ```powershell
-Copy-Item .env.example .env
+if (-not (Test-Path .env)) { Copy-Item .env.example .env }
 uv python install 3.12
 uv sync --python 3.12
 # A partir de aquí Postgres queda disponible en localhost:5433
@@ -41,13 +43,13 @@ uv run python scripts/seed.py --scale tiny --seed 20261101
 uv run python scripts/verify_bootstrap.py --compare counts.bootstrap.json
 ```
 
-> Si `uv sync` falla por conexión, proxy o versiones, Cursor debe diagnosticar y registrar el cambio; nunca declarar que funciona sin ejecutarlo. El archivo `.env` y los datos locales no deben commitearse.
+> Si `.env` ya existe, consérvalo: el comando no lo sobrescribe. Si `uv sync` falla por conexión, proxy o versiones, pídele a Copilot que diagnostique el error con evidencia; no debe afirmar que algo funciona sin ejecutarlo. El archivo `.env` y los datos locales no deben commitearse.
 
 ## Índice de lectura obligatorio
 
 | Orden | Documento | Propósito |
 |---|---|---|
-| 1 | [00-CONTRATO-CURSOR](docs/00-CONTRATO-CURSOR.md) | Qué debe y no debe hacer Cursor |
+| 1 | [00-CONTRATO-AGENTE](docs/00-CONTRATO-AGENTE.md) | Contrato del agente |
 | 2 | [01-ARQUITECTURA](docs/01-ARQUITECTURA.md) | Diseño, dominio y decisiones técnicas |
 | 3 | [02-INSTALACION](docs/02-INSTALACION.md) | Setup y diagnóstico paso a paso |
 | 4 | [03-MIGRACIONES](docs/03-MIGRACIONES.md) | Evolución del esquema y rollback |
@@ -63,17 +65,28 @@ uv run python scripts/verify_bootstrap.py --compare counts.bootstrap.json
 | 14 | [13-QA-OPS](docs/13-QA-OPS.md) | Testing, CI, Docker, observabilidad |
 | 15 | [14-PROYECTOS-FINALES](docs/14-PROYECTOS-FINALES.md) | Capstones de portafolio |
 | 16 | [15-RUTA-Y-RUBRICAS](docs/15-RUTA-Y-RUBRICAS.md) | 20 semanas y niveles de dominio |
-| 17 | [16-PROMPTS-CURSOR](docs/16-PROMPTS-CURSOR.md) | Prompts exactos por fase |
+| 17 | [16-PROMPTS-COPILOT](docs/16-PROMPTS-COPILOT.md) | Prompts para Copilot Chat por fase |
 | 18 | [17-CONTRATOS-API](docs/17-CONTRATOS-API.md) | Contratos a implementar, no respuestas |
 | 19 | [18-SEGURIDAD-Y-CALIDAD](docs/18-SEGURIDAD-Y-CALIDAD.md) | Seguridad y reglas profesionales |
-| 20 | [19-CHECKLIST-IMPLEMENTACION](docs/19-CHECKLIST-IMPLEMENTACION.md) | Checklist ejecutable y auditoría para Cursor |
+| 20 | [19-CHECKLIST-IMPLEMENTACION](docs/19-CHECKLIST-IMPLEMENTACION.md) | Checklist ejecutable y auditoría del entorno |
 | 21 | [20-CODIGO-MIGRACIONES](docs/20-CODIGO-MIGRACIONES.md) | Migraciones completas replicadas en Markdown |
 
 ## Regla de oro
 
-Abre primero **[INSTRUCCIONES-PARA-CURSOR.md](INSTRUCCIONES-PARA-CURSOR.md)** y pega el prompt maestro en Cursor.
+Abre el repositorio en VS Code, instala las extensiones recomendadas y abre GitHub Copilot Chat en modo **Agent**. Lee primero **[INSTRUCCIONES-PARA-VSCODE.md](INSTRUCCIONES-PARA-VSCODE.md)** y sigue el setup desde el terminal PowerShell integrado.
 
-**No solicites a Cursor “resolver el laboratorio”.** Pídele construir el esqueleto, explicar requisitos, revisar tu código, escribir pruebas **después** de que implementes, o dar pistas graduales. Los ejercicios no incluyen respuestas ni SQL resuelto.
+**No le pidas a Copilot “resolver el laboratorio”.** Pídele preparar el entorno, explicar requisitos, revisar tu código después de que lo implementes o darte pistas graduales. Los ejercicios no incluyen respuestas ni SQL resuelto.
+
+## Empezar con el primer laboratorio
+
+El primer reto es **SQL-001 — Exploración controlada y filtros**. Antes de empezar, completa el setup, aplica las migraciones, carga el seed `tiny` y confirma que la base está disponible. Luego:
+
+1. Lee el enunciado en [docs/07-LABS-SQL-BASE.md](docs/07-LABS-SQL-BASE.md) y consulta el esquema en [docs/04-MODELO-DE-DATOS.md](docs/04-MODELO-DE-DATOS.md).
+2. Usa Copilot para aclarar el contrato y preparar `workspaces/sql/SQL-001.sql` **solo si se lo pides**, sin escribir la consulta.
+3. Diseña tu consulta para un tenant, un rango UTC, estados y moneda; incluye paginación estable y orden explícito.
+4. Comprueba los casos de aceptación del enunciado y documenta tus decisiones. Pide revisión o pistas, no una solución.
+
+El proyecto contiene el enunciado, pero no la solución. No se crea el archivo del laboratorio hasta que decidas activarlo.
 
 ## Puntos de atención
 

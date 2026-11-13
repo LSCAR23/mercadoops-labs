@@ -1,8 +1,8 @@
-# 16 — Prompts listos para pegar en Cursor
+# 16 — Prompts listos para pegar en GitHub Copilot Chat
 
 ## Prompt 1 — Auditoría del ZIP y bootstrap (ejecutar primero)
 
-> Lee en este orden `README.md`, `.cursor/rules/00-project.mdc`, `docs/00-CONTRATO-CURSOR.md`, `docs/01-ARQUITECTURA.md`, `docs/02-INSTALACION.md` y `docs/03-MIGRACIONES.md`. Tu tarea es validar y reparar SOLO el entorno de MercadoOps Labs. No implementes consultas, algoritmos, endpoints, dashboards ni resultados de los laboratorios. Comprueba archivos y dependencias; ejecuta los comandos de arranque (o señala el bloqueo real); aplica las 5 migraciones; carga `tiny`; comprueba idempotencia, tests de bootstrap y health checks. Si un comando falla, diagnostícalo con evidencia y vuelve a ejecutarlo. No declares pruebas exitosas sin ejecutarlas. Antes de modificar, di qué archivo cambiarás y por qué. Al final entrega un reporte exacto de comandos, archivos cambiados, tests y laboratorios que siguen sin resolver.
+> Lee en este orden `README.md`, `.github/copilot-instructions.md`, `docs/00-CONTRATO-AGENTE.md`, `docs/01-ARQUITECTURA.md`, `docs/02-INSTALACION.md` y `docs/03-MIGRACIONES.md`. Tu tarea es validar y reparar SOLO el entorno de MercadoOps Labs. No implementes consultas, algoritmos, endpoints, dashboards ni resultados de los laboratorios. Comprueba archivos y dependencias; ejecuta los comandos de arranque (o señala el bloqueo real); aplica las 5 migraciones; carga `tiny`; comprueba idempotencia, tests de bootstrap y health checks. Si un comando falla, diagnostícalo con evidencia y vuelve a ejecutarlo. No declares pruebas exitosas sin ejecutarlas. Antes de modificar, di qué archivo cambiarás y por qué. Al final entrega un reporte exacto de comandos, archivos cambiados, tests y laboratorios que siguen sin resolver.
 
 ## Prompt 2 — Preparar un laboratorio SQL sin respuesta
 
@@ -38,4 +38,4 @@
 
 ## Cuándo permitir soluciones
 
-Solo cuando yo escriba expresamente “dame la solución completa de LAB-___” Cursor podrá entregar esa solución. Una petición como “prepárame el laboratorio”, “ayúdame”, “revísalo” o “explícamelo” **no** autoriza resolverlo.
+Solo cuando yo escriba expresamente “dame la solución completa de LAB-___” Copilot podrá entregar esa solución. Una petición como “prepárame el laboratorio”, “ayúdame”, “revísalo” o “explícamelo” **no** autoriza resolverlo.

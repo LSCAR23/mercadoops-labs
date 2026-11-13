@@ -9,7 +9,7 @@
 5. **Verificar** casos normales, vacíos, límites, negativos y de tenants cruzados.
 6. **Medir** (tiempo, plan de SQL, memoria, consultas, errores cuando aplique).
 7. **Documentar** resultado, decisiones y trade-offs.
-8. **Solicitar feedback de Cursor** sin solución completa (primera respuesta: solo evaluación y pistas).
+8. **Solicitar feedback de Copilot Chat** sin solución completa (primera respuesta: solo evaluación y pistas).
 
 ## Nombres de archivos y contenido
 
@@ -41,7 +41,7 @@
 - Ninguna solución acepta datos de otro tenant por ID aislado.
 - Nunca se aprueba un ejercicio únicamente porque devuelve un número plausible.
 
-## Modo de ayuda progresiva para Cursor
+## Modo de ayuda progresiva para Copilot Chat
 
 1. **Hint 1:** definición conceptual o qué parte leer.
 2. **Hint 2:** caso mínimo que podría romper la implementación.

@@ -2,7 +2,7 @@
 
 Secuencia SQL-001 a SQL-014. Prerrequisitos: migraciones y seed `tiny`. Para todos los reportes: define unidad temporal, estados válidos, dimensión tenant y forma de validación. La semilla no establece de forma implícita tus definiciones de negocio.
 
-**Contrato general:** el agente de Cursor debe mostrar únicamente este enunciado, crear stubs bajo `workspaces/sql/` cuando el estudiante lo pida y dejar la implementación pendiente. **No incluir soluciones, SQL de respuesta, algoritmos funcionales ni resultados precalculados.**
+**Contrato general:** Copilot debe mostrar únicamente este enunciado, crear stubs bajo `workspaces/sql/` cuando el estudiante active el laboratorio y dejar la implementación pendiente. **No incluir soluciones, SQL de respuesta, algoritmos funcionales ni resultados precalculados.**
 
 ## SQL-001 — Exploración controlada y filtros
 

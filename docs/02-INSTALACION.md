@@ -2,11 +2,11 @@
 
 ## Prerrequisitos
 
-Instala Git, Docker Desktop con motor Linux/WSL2, Python 3.12 (o usa `uv python install 3.12`), uv y Cursor. Reserva al menos 4 GB libres en disco para la escala `tiny`; para `large` el consumo crece considerablemente. Los puertos locales son **5433/PostgreSQL**, **6380/Redis**, **8000/API**.
+Instala VS Code, GitHub Copilot Chat, Git, Docker Desktop con motor Linux/WSL2, Python 3.12 (o usa `uv python install 3.12`) y uv. Reserva al menos 4 GB libres en disco para la escala `tiny`; para `large` el consumo crece considerablemente. Los puertos locales son **5433/PostgreSQL**, **6380/Redis**, **8000/API**.
 
 ## Procedimiento con PowerShell
 
-1. Descomprime el ZIP. Abre Cursor en la carpeta que contiene `pyproject.toml`.
+1. Abre en VS Code la carpeta que contiene `pyproject.toml`.
 2. Abre el terminal PowerShell integrado.
 3. Ejecuta `git init` si todavía no es repositorio, y verifica `.gitignore`.
 4. Comprueba versiones:

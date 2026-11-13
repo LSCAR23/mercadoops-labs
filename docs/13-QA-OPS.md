@@ -52,4 +52,4 @@ Estimar storage de 2M eventos, crecimiento mensual, índices, backup, CPU, pool 
 
 ## Umbral de aprobación senior
 
-No se aprueba si el único criterio es “funciona localmente”. El estudiante debe entregar casos de error, pruebas de múltiples tenants, evidencia de carga, tradeoffs, runbooks y planes de recuperación. Cursor puede crear stubs de las pruebas y pipelines **solo tras activar el lab** y nunca escribir una referencia que resuelva la lógica de negocio.
+No se aprueba si el único criterio es “funciona localmente”. El estudiante debe entregar casos de error, pruebas de múltiples tenants, evidencia de carga, tradeoffs, runbooks y planes de recuperación. Copilot puede crear stubs de las pruebas y pipelines **solo tras activar el lab** y nunca escribir una referencia que resuelva la lógica de negocio.

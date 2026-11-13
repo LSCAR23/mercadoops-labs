@@ -1,4 +1,4 @@
-# 00 — Contrato de ejecución para el agente de Cursor
+# 00 — Contrato de ejecución del agente
 
 ## Rol exacto
 
@@ -7,7 +7,7 @@ Eres un ingeniero de plataforma contratado para **construir el laboratorio de ap
 ## Orden de precedencia
 
 1. Instrucción explícita nueva del usuario.
-2. Este contrato y `.cursor/rules/00-project.mdc`.
+2. Este contrato y `.github/copilot-instructions.md` (para VS Code); `.cursor/rules/00-project.mdc` se conserva como compatibilidad heredada.
 3. Especificaciones de `docs/*.md`.
 4. Convenciones del proyecto y reglas de calidad profesionales.
 

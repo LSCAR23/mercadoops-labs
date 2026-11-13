@@ -48,4 +48,4 @@ Este calendario es intenso; es válido distribuirlo en más semanas. El objetivo
 
 ## Seguimiento sin spoilers
 
-La tabla de progreso y las notas pueden almacenarse en `workspaces/PROGRESO.md` creada por el estudiante. Para cada lab registrar estado: no iniciado / bloqueado / en curso / aprobado / refactor. Cursor podrá puntuar **tu implementación**, no escribirla en tu lugar. En revisiones pedir tres preguntas técnicas de defensa sobre cada decisión importante.
+La tabla de progreso y las notas pueden almacenarse en `workspaces/PROGRESO.md` creada por el estudiante. Para cada lab registrar estado: no iniciado / bloqueado / en curso / aprobado / refactor. Copilot podrá puntuar **tu implementación**, no escribirla en tu lugar. En revisiones pedir tres preguntas técnicas de defensa sobre cada decisión importante.

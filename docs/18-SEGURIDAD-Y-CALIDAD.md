@@ -40,7 +40,7 @@
 - Migration reviews: DDL transaccional, rollback probado, backfills por lotes, plan de bloqueo y disponibilidad.
 - Scripts de borrado solo en DB descartable confirmada y con backup válido.
 
-## Antipatrón que Cursor debe detectar
+## Antipatrón que Copilot debe detectar
 
 `except: pass`; `except Exception: return []`; uso de float como dinero; `.all()` sobre millones sin paginación; llamadas a servicios dentro de transacción abierta; locks sin timeout; operaciones de stock read-modify-write sin exclusión; secretos hardcodeados; filtrado por tenant solo en frontend; N+1 queries; `SELECT *` sin contrato; tests que necesitan ejecutarse en orden; afirmaciones sin métricas.
 

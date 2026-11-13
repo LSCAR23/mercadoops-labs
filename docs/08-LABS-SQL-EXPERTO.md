@@ -2,7 +2,7 @@
 
 SQL-015 a SQL-030. Requiere completar fundamentos, comprender EXPLAIN, estadística descriptiva y distinción entre datos operacionales y analíticos. Varios retos requieren una BD descartable dedicada.
 
-**Contrato general:** el agente de Cursor debe mostrar únicamente este enunciado, crear stubs bajo `workspaces/sql/` cuando el estudiante lo pida y dejar la implementación pendiente. **No incluir soluciones, SQL de respuesta, algoritmos funcionales ni resultados precalculados.**
+**Contrato general:** Copilot debe mostrar únicamente este enunciado, crear stubs bajo `workspaces/sql/` cuando el estudiante active el laboratorio y dejar la implementación pendiente. **No incluir soluciones, SQL de respuesta, algoritmos funcionales ni resultados precalculados.**
 
 ## SQL-015 — Ranking top-N por grupo
 
@@ -92,7 +92,7 @@ SQL-015 a SQL-030. Requiere completar fundamentos, comprender EXPLAIN, estadíst
 
 **Entrega.** `SQL-023.sql` + plan de backfill y documentación de métricas.
 
-**Restricciones y extensiones.** Esta tabla empieza vacía. Cursor NO debe implementarlo; el estudiante elige criterios de ingreso y consistencia.
+**Restricciones y extensiones.** Esta tabla empieza vacía. Copilot NO debe implementarlo; el estudiante elige criterios de ingreso y consistencia.
 
 ## SQL-024 — Alertas por desviaciones
 

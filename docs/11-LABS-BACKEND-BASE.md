@@ -2,7 +2,7 @@
 
 BE-001 a BE-012. Se implementan **después** de los laboratorios SQL/Python de base. Escribir código únicamente cuando el estudiante inicia ese ejercicio; el bootstrap conserva solo health checks.
 
-**Contrato general:** el agente de Cursor debe mostrar únicamente este enunciado, crear stubs bajo `workspaces/backend/` cuando el estudiante lo pida y dejar la implementación pendiente. **No incluir soluciones, SQL de respuesta, algoritmos funcionales ni resultados precalculados.**
+**Contrato general:** Copilot debe mostrar únicamente este enunciado, crear stubs bajo `workspaces/backend/` cuando el estudiante active el laboratorio y dejar la implementación pendiente. **No incluir soluciones, SQL de respuesta, algoritmos funcionales ni resultados precalculados.**
 
 ## BE-001 — Diseño de capas y dependencias
 

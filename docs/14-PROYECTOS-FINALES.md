@@ -71,4 +71,4 @@ Cada proyecto debe producir un repositorio/PR independiente, explicación de arq
 
 ## Exclusiones
 
-No crear automáticamente los capstones terminados, dashboards con resultados precalculados, API de pagos reales o implementaciones que invadan los labs. Cursor solo prepara la estructura y guía la revisión progresiva.
+No crear automáticamente los capstones terminados, dashboards con resultados precalculados, API de pagos reales o implementaciones que invadan los labs. Copilot solo prepara la estructura y guía la revisión progresiva.

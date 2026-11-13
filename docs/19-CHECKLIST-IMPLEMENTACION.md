@@ -1,4 +1,4 @@
-# 19 — Checklist de construcción exacta (para Cursor con poca autonomía técnica)
+# 19 — Checklist de construcción y validación del entorno
 
 Este checklist convierte el contrato general en un guion que debe ejecutarse **en orden**. Marca una casilla solo con evidencia. Si un paso falla, detén la fase, corrige únicamente el error y reintenta el paso fallido.
 
@@ -11,7 +11,8 @@ Este checklist convierte el contrato general en un guion que debe ejecutarse **e
 - [ ] `src/mercadoops/__init__.py`, `config.py`, `db.py`, `main.py`
 - [ ] `scripts/seed.py`, `scripts/verify_bootstrap.py`
 - [ ] `tests/test_bootstrap.py`
-- [ ] `.cursor/rules/00-project.mdc`
+- [ ] `.github/copilot-instructions.md`
+- [ ] `.vscode/extensions.json`
 - [ ] `docs/00` a `docs/19` y `workspaces/README.md`
 
 ## B. Validaciones de sintaxis / archivos

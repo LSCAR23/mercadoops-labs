@@ -1,6 +1,6 @@
 # 20 — Código íntegro de las migraciones (para consulta en Markdown)
 
-Este documento replica literalmente las migraciones incluidas en el starter. **La fuente ejecutable es `db/alembic/versions/*.py`**; este `.md` es una referencia cómoda para Cursor. Ningún bloque a continuación resuelve los ejercicios SQL: solo define estructura de almacenamiento e índices operacionales mínimos.
+Este documento replica literalmente las migraciones incluidas en el starter. **La fuente ejecutable es `db/alembic/versions/*.py`**; este `.md` es una referencia cómoda para el estudiante y su agente. Ningún bloque a continuación resuelve los ejercicios SQL: solo define estructura de almacenamiento e índices operacionales mínimos.
 
 **IMPORTANTE:** si el esquema evoluciona después de aplicar estas revisiones, añade una nueva migración. No edites una revisión histórica en un entorno ya migrado. Ejecuta `uv run alembic upgrade head` desde la raíz.
 
@@ -435,4 +435,3 @@ def downgrade() -> None:
     op.execute("DROP TABLE analytics.raw_orders")
     op.execute("DROP TABLE analytics.daily_sales")
 ```
-
