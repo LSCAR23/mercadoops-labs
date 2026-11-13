@@ -9,16 +9,16 @@ import argparse
 import os
 import random
 import uuid
-from datetime import datetime, timedelta, timezone
 from bisect import bisect_right
+from collections.abc import Iterable, Iterator
+from datetime import UTC, datetime, timedelta
 from decimal import Decimal
-from typing import Any, Iterable, Iterator
+from typing import Any
 
 import psycopg
 from psycopg.types.json import Jsonb
 
-
-ANCHOR = datetime(2026, 11, 1, 12, 0, 0, tzinfo=timezone.utc)
+ANCHOR = datetime(2026, 11, 1, 12, 0, 0, tzinfo=UTC)
 NAMESPACE = uuid.UUID("51f2c8ad-1b74-4f0c-b2e2-7ffea65be311")
 TENANTS = (("caribe-demo", "Caribe Demo"), ("pacifico-demo", "Pacífico Demo"))
 CATEGORIES = ("Electrónica", "Hogar", "Moda", "Deportes", "Oficina", "Jardín")
@@ -39,7 +39,7 @@ def uid(*parts: object) -> uuid.UUID:
     return uuid.uuid5(NAMESPACE, ":".join(str(part) for part in parts))
 
 
-def money(value: str | int | float | Decimal) -> Decimal:
+def money(value: str | float | Decimal) -> Decimal:
     return Decimal(str(value)).quantize(Decimal("0.01"))
 
 
@@ -153,7 +153,7 @@ def seed_tenant(conn: psycopg.Connection[Any], slug: str, name: str, scale: dict
             product_index = rng.randrange(scale["products"])
             qty = rng.randint(1, 3)
             unit_price = product_prices[product_index]
-            discount = money(unit_price * qty * (Decimal("0.10") if rng.random() < .13 else Decimal("0")))
+            discount = money(unit_price * qty * (Decimal("0.10") if rng.random() < .13 else Decimal(0)))
             item_rows.append((uid(slug, "order-item", i, j), tenant_id, order_id,
                               uid(slug, "product", product_index), qty, unit_price, discount))
             total += money(unit_price * qty - discount)

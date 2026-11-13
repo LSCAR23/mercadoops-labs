@@ -2,8 +2,8 @@ from collections.abc import Iterator
 from functools import lru_cache
 
 from sqlalchemy import create_engine
-from sqlalchemy.orm import Session, sessionmaker
 from sqlalchemy.engine import Engine
+from sqlalchemy.orm import Session, sessionmaker
 
 from mercadoops.config import get_settings
 

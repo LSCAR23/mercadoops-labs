@@ -5,6 +5,7 @@ import json
 from pathlib import Path
 
 import psycopg
+
 from seed import connection_string
 
 EXPECTED_SCHEMAS = {"core", "events", "ops", "analytics"}

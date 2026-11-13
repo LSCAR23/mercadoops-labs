@@ -1,5 +1,6 @@
 """Baseline only; this file must never contain lab exercise solutions."""
 from fastapi.testclient import TestClient
+
 from mercadoops.main import app
 
 
