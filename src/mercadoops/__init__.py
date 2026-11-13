@@ -1,0 +1,1 @@
+"""MercadoOps educational starter package."""

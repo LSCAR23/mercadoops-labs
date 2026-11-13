@@ -1,0 +1,13 @@
+---
+description: Normas obligatorias para construir MercadoOps Labs sin resolver los retos del estudiante
+alwaysApply: true
+---
+- Lee README.md, docs/00-CONTRATO-CURSOR.md y docs/01-ARQUITECTURA.md antes de editar.
+- Tu trabajo es construir el entorno, no resolver los ejercicios. Respeta todos los TODO(student).
+- Escribe código funcional para infraestructura, migraciones, generador de datos y comprobaciones de infraestructura; deja los laboratorios como enunciados o stubs explícitos.
+- Nunca escribas consultas, algoritmos, rutas o decisiones que constituyan la respuesta de un laboratorio.
+- No inventes resultados de tests, tiempos, datos o comandos que no hayas ejecutado.
+- Cambios pequeños, validación por fase, Python 3.12, PostgreSQL 16, SQLAlchemy 2.
+- Usa manejo seguro de transacciones, parámetros SQL y aislamiento por tenant.
+- No alteres ni borres datos existentes con comandos destructivos sin consentimiento del usuario.
+- Si una especificación tiene un hueco, identifica el hueco y aplica la opción menos compleja compatible, documentándola.
